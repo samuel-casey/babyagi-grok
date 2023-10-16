@@ -1,0 +1,31 @@
+filePath,lineCoverage,content
+/Users/samc/Documents/GitHub/babyagi-grok/babycoder/playground/noop.md,"(1, 1)",# noop
+/Users/samc/Documents/GitHub/babyagi-grok/babycoder/playground/project/main.py,"(1, 11)","from temperature_converter import TemperatureConverter
+value = input('Enter the temperature value: ')
+unit = input('Enter the unit (Celsius or Fahrenheit): ')
+```python
+from temperature_converter import TemperatureConverter
+tc = TemperatureConverter()
+if unit.lower() == 'celsius':
+    result = tc.celsius_to_fahrenheit(float(value))
+else:
+    result = tc.fahrenheit_to_celsius(float(value))
+```"
+/Users/samc/Documents/GitHub/babyagi-grok/babycoder/playground/project/temperature_converter.py,"(1, 18)","class TemperatureConverter:
+    def __init__(self):
+        pass
+class TemperatureConverter:
+    def __init__(self):
+        pass
+    def celsius_to_fahrenheit(self, celsius: float) -> float:
+        fahrenheit = (celsius * 9/5) + 32
+        return fahrenheit
+class TemperatureConverter:
+    def __init__(self):
+        pass
+    def celsius_to_fahrenheit(self, celsius: float) -> float:
+        fahrenheit = (celsius * 9/5) + 32
+        return fahrenheit
+    def fahrenheit_to_celsius(self, fahrenheit: float) -> float:
+        celsius = (fahrenheit - 32) * 5/9
+        return celsius"
