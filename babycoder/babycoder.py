@@ -23,10 +23,10 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 assert OPENAI_API_KEY, "OPENAI_API_KEY environment variable is missing from .env"
 openai.api_key = OPENAI_API_KEY
 
-OPENAI_API_MODEL = os.getenv("OPENAI_API_MODEL", "gpt-3.5-turbo")
-assert OPENAI_API_MODEL, "OPENAI_API_MODEL environment variable is missing from .env"
+LLM_MODEL = os.getenv("LLM_MODEL", "gpt-3.5-turbo")
+assert LLM_MODEL, "LLM_MODEL environment variable is missing from .env"
 
-if "gpt-4" in OPENAI_API_MODEL.lower():
+if "gpt-4" in LLM_MODEL.lower():
     print(
         f"\033[91m\033[1m"
         + "\n*****USING GPT-4. POTENTIALLY EXPENSIVE. MONITOR YOUR COSTS*****"
@@ -66,7 +66,7 @@ def print_char_by_char(text, delay=0.00001, chars_at_once=3):
 
 def openai_call(
     prompt: str,
-    model: str = OPENAI_API_MODEL,
+    model: str = LLM_MODEL,
     temperature: float = 0.5,
     max_tokens: int = 100,
 ):
