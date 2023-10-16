@@ -1,16 +1,50 @@
 filePath,lineCoverage,content
 /Users/samc/Documents/GitHub/babyagi-grok/babycoder/playground/noop.md,"(1, 1)",# noop
-/Users/samc/Documents/GitHub/babyagi-grok/babycoder/playground/project/main.py,"(1, 11)","from temperature_converter import TemperatureConverter
+/Users/samc/Documents/GitHub/babyagi-grok/babycoder/playground/project/primes_generator.py,"(1, 27)","class PrimeNumberGenerator:
+    def generate_primes(self, max: int) -> List[int]:
+        primes = []
+        for num in range(2, max):
+            if all(num % i != 0 for i in range(2, int(num ** 0.5) + 1)):
+                primes.append(num)
+        return primes
+    def generate_num_primes(self, max: int) -> int:
+        count = 0
+        for num in range(2, max):
+            if all(num % i != 0 for i in range(2, int(num ** 0.5) + 1)):
+                count += 1
+        return count
+class PrimesGenerator:
+    def generate_primes(self, max: int) -> List[int]:
+        primes = []
+        for num in range(2, max):
+            if all(num % i != 0 for i in range(2, int(num ** 0.5) + 1)):
+                primes.append(num)
+        return primes
+class PrimesGenerator:
+    def generate_num_primes(self, max: int) -> int:
+        count = 0
+        for num in range(2, max):
+            if all(num % i != 0 for i in range(2, int(num ** 0.5) + 1)):
+                count += 1
+        return count"
+/Users/samc/Documents/GitHub/babyagi-grok/babycoder/playground/project/main.py,"(1, 18)","from temperature_converter import TemperatureConverter
 value = input('Enter the temperature value: ')
-unit = input('Enter the unit (Celsius or Fahrenheit): ')
-```python
-from temperature_converter import TemperatureConverter
+unit = input('Enter the unit (C or F): ')
 tc = TemperatureConverter()
-if unit.lower() == 'celsius':
+if unit.lower() == 'c':
     result = tc.celsius_to_fahrenheit(float(value))
 else:
     result = tc.fahrenheit_to_celsius(float(value))
-```"
+print('Converted temperature:', result)
+import PrimesGenerator from primes_generator
+code = ""max_value = int(input('Enter the max value: '))""
+from PrimesGenerator import PrimesGenerator
+primes_generator = PrimesGenerator()
+from PrimesGenerator import PrimesGenerator
+primes_generator = PrimesGenerator()
+max_value = int(input('Enter the max value: '))
+result = primes_generator.generate_primes(max_value)
+print(result)"
 /Users/samc/Documents/GitHub/babyagi-grok/babycoder/playground/project/temperature_converter.py,"(1, 18)","class TemperatureConverter:
     def __init__(self):
         pass
